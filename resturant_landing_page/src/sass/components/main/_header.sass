@@ -1,0 +1,24 @@
+@use "../../utilities/values" as v
+.main__header
+
+  .row
+    &>:first-child
+      order: 2
+
+      @media (max-width:v.$md-screen )
+        display: none
+
+    &>:last-child
+      align-items: center
+      
+      .main__header__summary
+        .summary__title
+          font-size: 2rem
+        
+        .summary__subtitle
+          font-size: 1.6rem
+          margin-bottom: .6em
+        
+        p
+          color: var(--heading-font-color)
+          margin-bottom: 1em

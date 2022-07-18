@@ -1,0 +1,25 @@
+@use "../../utilities/values" as v
+
+.contact
+  .contact__box
+    align-items: center
+    justify-content: space-between
+    background-color: v.$section-bg
+    border-radius: 20px
+    border: 2px dashed var(--priamry-color)
+    width: 60%
+    margin: auto
+    padding: 1.2em
+
+    @media (max-width:v.$md-screen )
+      width: 100%
+      flex-direction: column
+      text-align: center
+      
+    .contact__text
+      flex-basis: 67%
+      @media (max-width:v.$md-screen )
+        flex-basis: 100%
+
+      p
+        padding: .75em 0

@@ -1,0 +1,42 @@
+@use "../classes" as * 
+@use "../utilities/values" as v
+
+
+.footer
+  @media (max-width:v.$md-screen )
+    text-align: center
+
+  .row > div:not(:last-of-type)
+    @media (max-width:v.$md-screen ) 
+      margin-bottom: 1em
+  
+  .footer__first-col
+    flex-direction: column
+    align-items:  flex-start
+    
+    @media (max-width:v.$md-screen )
+      align-items: center
+    
+    .footer__social-links
+      margin-right: -.6em
+      a
+        padding: 1rem .5rem
+        img
+          max-width: 80%
+
+  .footer__links
+    margin-bottom: 1em
+    h3
+      padding-bottom: 1rem
+    
+    ul li 
+      padding-bottom: .25em 
+      &:hover
+        @extend .text--active
+
+  .footer__copyright
+    width: 100%
+    font-size: .95rem
+    background-color: v.$section-bg
+    margin-top: 1em
+    padding: 1em

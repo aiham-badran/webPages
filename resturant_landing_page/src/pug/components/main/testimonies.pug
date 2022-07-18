@@ -1,0 +1,31 @@
+-var usersData = [{name:" أحمد جمال",img:"./assets/images/user1.png"},{name:" علي علاء",img:"./assets/images/user2.png"},{name:"سارة أحمد",img:"./assets/images/user3.png"}]
+
+section.testimonies.section.section--colorful
+  .container
+    h2.testimonies__title.text--center آراء عملاء الأكيل
+
+    .testimonies__content.row.justify-evenly
+      each user in usersData
+        .col-4.col.testimonies__card
+          .card__header
+            .row
+              .col-3 
+                img.card__header__img(src=user.img, alt=user.name)
+              .col-6.card__header__info
+                h4=user.name
+                p عميل مميز
+          .card__body
+            p هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل لنص هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة.
+          .card__footer
+            .card__footer__reviews.row 
+              img(src="./assets/icons/star.svg", alt="star")
+              img(src="./assets/icons/star.svg", alt="star")
+              img(src="./assets/icons/star.svg", alt="star")
+              img(src="./assets/icons/star.svg", alt="star")
+              img(src="./assets/icons/star.svg", alt="star")
+
+    .slide.row.box--center 
+      .slide__circle
+        span
+        span
+        span 

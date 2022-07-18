@@ -1,0 +1,73 @@
+@use "../../utilities/values" as v
+
+
+.booking.section
+  
+  .booking__body
+    background-image: url("../images/reservation.png")
+    background-position: center center
+    background-size: cover
+    padding: 5em 1em
+    height:250px 
+    border-radius: 40px
+    overflow: hidden
+    position: relative
+    
+
+    .booking__content
+      flex-direction: column
+      background-color: rgba(v.$primary-color, .9)
+      border-radius: 40px
+      width: 50%
+      position: absolute 
+      top: 0
+      right: 0
+      bottom: 0
+      
+      @media (max-width:v.$md-screen )
+        width: 100%
+
+      .booking__title
+        color: v.$white-color
+        padding-bottom: 1em
+        @media (max-width:v.$md-screen )
+          padding:
+            top: 1em
+            bottom: 0
+
+      .booking__form
+        flex-direction: column
+        
+        .row > div
+          display: flex
+          flex-direction: column
+          margin: 
+            right: .7em
+            left: .7em 
+
+          label
+            font-size: .8rem
+            font-weight: bold
+            padding-bottom: .4em
+            color: var(--heading-font-color)
+
+          input,select
+            color: v.$white-color
+            background-color: transparent
+            border: 1px dashed v.$white-color
+            border-radius: 3px
+            outline: none
+            padding: .2em .4em
+          
+          select 
+            option
+              color: var(--heading-font-color)
+
+        button 
+          margin:
+            top: 1.5em
+            bottom: 1em
+          background-color: v.$white-color
+          &:hover
+            background-color: v.$primary-color-darker
+

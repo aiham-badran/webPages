@@ -1,0 +1,114 @@
+@use 'sass:math'
+@use "./utilities/values" as v
+
+// layout 
+
+.section
+  padding: 
+    top: 4em
+    bottom: 4em
+
+.section--colorful
+  background-color: v.$section-bg
+
+// flex
+.flex
+  display: flex
+
+.justify-between
+  justify-content: space-between
+
+.justify-evenly
+  justify-content: space-evenly
+
+.box--center
+  @extend .flex
+  justify-content: center
+  align-items: center
+
+// grid system
+
+.container
+  max-width: 960px
+  margin: auto
+  padding:
+    left:1em 
+    right:1em
+
+.row
+  @extend .flex
+  flex-wrap: wrap
+  padding:
+    left: .5em
+    right: .5em
+
+
+$cols: 3, 4, 5, 6, 7
+
+@each $col in $cols
+  .col-#{$col}
+    $col: math.div(12,$col)
+    flex-basis: calc(100% / #{$col})
+
+@media (max-width:v.$md-screen )
+  .col
+    flex-basis: 100%
+
+// button 
+
+.btn
+  font-size: 1rem
+  font-weight: bold
+  color: var(--heading-font-color)
+  padding: .75em 2em
+  background-color: #efefef
+  border-radius: 5px
+  cursor: pointer
+  
+  &:hover,
+  &.btn--active
+    color: v.$white-color
+    background-color: rgba(v.$primary-color ,.85 )
+
+.btn--small
+  font-size: .7rem
+  color: var(--font-color)
+  padding: .9em 2.5em
+
+.btn--icon
+  @extend .box--center
+  font-size: 1rem
+  font-weight: normal
+  color: v.$white-color
+  padding: .2rem
+  width: 35px
+  height: 35px
+  border-radius: 50%
+ 
+
+.btn--primary
+  background-color: var(--priamry-color)
+
+.btn--gray
+    background-color: v.$gray-color
+
+// text
+.text--center
+  text-align: center
+
+.text--active
+    color: var(--priamry-color)
+
+
+// glable class
+
+.brand
+  img
+    width: 1.5em
+  span
+    font-size: 1.5rem
+    font-weight: bold
+    color: var(--heading-font-color)
+    padding: 
+      left: .25em
+      right: .25em

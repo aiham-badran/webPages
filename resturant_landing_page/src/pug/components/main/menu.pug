@@ -1,0 +1,22 @@
+-var cardImg = ["./assets/images/menu-1.png","./assets/images/menu-2.png","./assets/images/menu-3.png","./assets/images/menu-4.png","./assets/images/menu-5.png","./assets/images/menu-6.png","./assets/images/menu-7.png","./assets/images/menu-8.png"]
+
+section#menu.menu.section
+  .container
+    h2.menu__title قائمة الطعام
+
+    .menu__btns.row.justify-between
+      .menu__meals-btn.flex
+        button.btn.btn--small.btn--active الافطار
+        button.btn.btn--small.btn--gray الغداء
+        button.btn.btn--small.btn--gray العشاء
+      button.btn.btn--primary كل الوجبات
+    .row 
+      each img in cardImg
+        .col-3.col
+          .menu__card
+            img.card__img(src=img, alt="meal image")
+            .card__body 
+              h4.card__title اسم الوجبة هنا اسم الوجبة هنا
+              .card__action.flex.justify-between 
+                span.card__price(data-currency="tl") 120
+                button.btn.btn--icon.btn--primary: span +

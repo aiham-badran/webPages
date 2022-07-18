@@ -1,0 +1,25 @@
+-var footerLinks = [{title:"الخدمات",links:["حجز طاولة","خدمة العملاء","المنتجات","قائمة الطعام"]},{title:"الشركة",links:["الوظائف","شهادات الجودة","المشاركة الاجتماعية","عن الشركة"]},{title:"روابط",links:["تواصل معنا","سياسة الخصوصبة","سياسة الاستخدام"]}]
+
+footer.footer 
+  .container 
+    .footer__main 
+      .row 
+        .footer__first-col.col-3.col.flex
+          .brand.box--center
+            img(src="./assets/icons/fork-and-knife.svg", alt="شعار الأكيل")
+            span الأكيل 
+          .footer__social-links.flex
+            a(href="#"): img(src="./assets/icons/facebook.svg", alt="facebook links")
+            a(href="#"): img(src="./assets/icons/instagram.svg", alt="instagram links")
+            a(href="#"): img(src="./assets/icons/twitter.svg", alt="twitter links")
+        each links in footerLinks 
+          .col-3.col.footer__links
+            h3=links.title 
+            ul 
+              each link in links.links 
+                li: a(href="#")=link
+  .footer__copyright.text--center
+    p  
+      a(href="https://www.linkedin.com/in/aiham-badran/") By Aiham Badran  
+      | 
+      a(href="https://www.udemy.com/course/arabic-html-css/")  Codv Academy &copy; 2022   

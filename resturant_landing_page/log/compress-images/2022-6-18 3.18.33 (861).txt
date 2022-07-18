@@ -1,0 +1,7 @@
+File from: [./storage/images/menu-1.png]
+
+File to: [./dist/assets/images/menu-1.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: /home/ayham/Documents/Projects/frontend_old/resturant_landing_page/node_modules/pngquant-bin/vendor/pngquant --quality=20-50 -o ./dist/assets/images/menu-1.png ./storage/images/menu-1.png

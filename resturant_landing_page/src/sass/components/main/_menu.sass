@@ -1,0 +1,59 @@
+@use "../../utilities/values" as v
+
+.menu
+  
+  .menu__title
+    margin-bottom: 1em
+
+  .menu__btns
+    align-items: center
+    margin-bottom: 2em
+    
+    @media (max-width:v.$md-screen )
+      flex-direction: column
+    
+    .menu__meals-btn
+      
+      @media (max-width:v.$md-screen )
+        margin-bottom: 1.25em
+      button
+        margin: 0 .4em
+  .menu__card
+    border: 3px dashed var(--priamry-color)
+    border-radius: 20%
+    height: 270px
+    margin: .5em
+    overflow: hidden
+    position: relative
+
+    .card__img
+      object-fit: cover
+      
+    .card__body
+      background-color: v.$white-color
+      border-radius: 20%
+      width: 100%
+      padding: 1em
+      position: absolute
+      bottom: 0
+      right: 0
+
+      .card__action
+        font-size: 1.1rem
+        padding-top: .2em 
+
+
+        .card__price
+          text-transform: uppercase
+          color: var(--priamry-color)
+          padding:
+            top: .25em
+            right: .2em
+          &::after
+            font-size: .9em
+            content: attr(data-currency)
+            padding: 0 .2em
+
+        button span
+          font-size: 1.75rem
+          padding-bottom: .2em

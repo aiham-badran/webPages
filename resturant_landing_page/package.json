@@ -1,0 +1,42 @@
+{
+  "name": "restaurant-codv-academy",
+  "version": "1.0.0",
+  "description": "A landing page for a restaurant This page is the first training for a course Modern HTML & CSS Created by Hossam Marey on the site udemy.com ",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "autoprefixer": "^10.4.7",
+    "compress-images": "^2.0.5",
+    "del": "^6.1.1",
+    "gifsicle": "^5.2.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-env": "^0.4.0",
+    "gulp-if": "^3.0.0",
+    "gulp-parcel": "^0.3.6",
+    "gulp-postcss": "^9.0.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uncss": "^1.0.6",
+    "pngquant-bin": "^6.0.1",
+    "postcss": "^8.4.14",
+    "sass": "^1.50.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.1"
+  }
+}

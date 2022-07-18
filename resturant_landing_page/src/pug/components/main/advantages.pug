@@ -1,0 +1,14 @@
+//- var
+-var advantagesData = [{icon:"./assets/icons/adv-1-icon.svg",title:"طعام صحي"},{icon:"./assets/icons/adv-2-icon.svg",title:"وصفات مميزة"},{icon:"./assets/icons/adv-3-icon.svg",title:"عروض حصرية"}] 
+
+section.advantages.section.section--colorful
+  .container
+    h1.advantages__title.text--center لماذا الأكيل هو الافضل ؟
+
+    .row.justify-between
+      each advantage in advantagesData
+        .col-4.col.advantages_content
+          img(src=advantage.icon, alt=advantage.title)
+          h3=advantage.title 
+          p.text--center هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى .
+

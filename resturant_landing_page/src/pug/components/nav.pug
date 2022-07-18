@@ -1,0 +1,21 @@
+//- var 
+-var navbarMenuItems = {}
+-navbarMenuItems["home"] = ["الرئيسية","/","active"]
+-navbarMenuItems["menu"] = ["قائمة الطعام","#menu"]
+-navbarMenuItems["booking"] = ["أحجز مقعدك","#booking"]
+-navbarMenuItems["contact"] = ["أتصال بنا","#contact"]
+
+nav.nav
+  .container 
+    .row.justify-between
+      .nav__logo.brand.box--center
+        img(src="./assets/icons/fork-and-knife.svg", alt="شعار الأكيل")
+        span الأكيل 
+      
+      .nav__navbar 
+        ul.navbar__list.flex(data-css-gap="55px",css-color="red")
+          each item in navbarMenuItems
+            if item[2]
+              li.navbar__item.text--active: a(href=item[1])=item[0]
+            else
+              li.navbar__item: a(href=item[1])=item[0]

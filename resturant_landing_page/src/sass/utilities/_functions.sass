@@ -1,0 +1,4 @@
+@use 'sass:math'
+// conversion any px to rem or em without extension
+@function torem($value)
+  @return math.div($value ,16)

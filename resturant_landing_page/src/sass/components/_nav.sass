@@ -1,0 +1,34 @@
+@use "../utilities/values" as v
+@use "../classes" as *
+
+nav.nav
+  padding:
+    top: 1em
+    bottom: 1em
+  
+  .row
+    align-items: center
+
+    @media ( max-width:v.$md-screen )
+      flex-direction: column
+
+    .nav__navbar
+      @media ( max-width:v.$md-screen )
+        margin-top: 1.2em
+      
+      .navbar__list
+        @media ( max-width:v.$md-screen )
+          justify-content: center
+          align-items: center
+          flex-wrap: wrap
+        
+        .navbar__item
+          padding: 
+            left: .7em
+            right: .7em
+          @media ( max-width:v.$md-screen)
+            font-size: .8rem
+            width: max-content
+            margin-top: 1em
+          &:hover
+            @extend .text--active
