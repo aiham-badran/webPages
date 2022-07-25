@@ -1,0 +1,45 @@
+@use "../../vars";
+@use "../../placeholder";
+
+.services{
+
+  .info__services{
+    margin: 1em 0;
+
+    .info__item {
+      margin-bottom: 2em; // lg 1.25em
+
+      .icon__info{
+        font-size: 1.4rem;
+        color: vars.$primary-color;
+        margin-right: -.45em;
+      }
+
+      .title__info{
+        margin-bottom: 1.5em;
+      }
+      // ---- End title__info 
+
+    }
+    // ---- End info__item 
+  }
+  //  ---- End info__services
+
+  .image__services{
+    @extend %img-small;
+    
+    &::after{
+      content: "";
+      background-color: vars.$header-color;
+      width: 60px;
+      height: 325px;
+      position: absolute;
+      right: -30px;
+      top:-25px;
+      z-index: -1;
+    }
+    // ---- End after
+  }
+  // ---- End image__services
+}
+// ---- End services

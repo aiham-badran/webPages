@@ -1,0 +1,27 @@
+//- include ../../_vars.pug
+
+section.section.about.info
+  .container 
+    
+    //- content
+    .row
+      //- text
+      .col-12.col-md-8
+        .content__about 
+          
+          p.desc__about Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            |  sed do eiusmod tempor incididunt ut labore et dolore 
+            |  magna aliqua. Ut enim ad minim veniam, quis nostrud 
+            |  exercitation ullamco laboris nisi ut aliqui
+          
+          p.sub-desc__about Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+            | incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+            |  exercitation ullamco laboris nisi ut aliqu
+      
+      //- card 
+      .col-12.col-md-3.card
+        .details__info
+          each item in detailsInfo
+            .item__details
+              h5.header__item__details=item[0]
+              p.text__item__details=item[1]

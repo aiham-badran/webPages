@@ -1,0 +1,92 @@
+//- Leon - PSD Agency Template form was downloaded from graphberry.com
+//- https://www.graphberry.com/item/leon-psd-agency-template
+
+-var title = "Leon - PSD Agency Template"
+-var links = []
+-var scripts = []
+-var images = {}
+-var sectionHeader = []
+-var navbar = []
+
+-var mainPath = `./assets`
+-var cssPath = `${mainPath}/css`
+-var jsPath = `${mainPath}/js`
+-var imagesPath = `${mainPath}/images`
+
+
+-links.push({href:`${cssPath}/main.css`})
+-scripts.push(`${jsPath}/main.js`)
+
+//- navbar list 
+//- -var navbar ={
+//-   part:{
+//-     head:"Menu",
+//-     lists:[
+//-       ["Home","#","active"]
+//-     ]
+//-   }
+//- }
+
+-navbar.push({head:"menu",lists:[]})
+
+-navbar[0].lists.push(["home","/#home","active"])
+-navbar[0].lists.push(["services","/#services"])
+-navbar[0].lists.push(["portfolio","/#portfolio"])
+-navbar[0].lists.push(["about","/#about"])
+-navbar[0].lists.push(["work","./work.html"])
+
+-navbar.push({head:"Get in Touch",lists:[["Contact Me","#contactMe"]]})
+
+-navbar.push({head:"Get Social",lists:[]})
+
+-navbar[2].lists.push(["Behance","#"])
+-navbar[2].lists.push(["Dribble","#"])
+-navbar[2].lists.push(["Twitter","#"])
+
+//- index page
+
+//- work
+
+-var worksData = []
+-worksData.push(["fa-wand-magic-sparkles","Tell Us Your Idea","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab"])
+-worksData.push(["fa-gem","We Will Do All The Work","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab"])
+-worksData.push(["fa-earth-africa","Your Product is Worldwide","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab"])
+
+
+//- services
+
+-images["services"] = `${imagesPath}/services.jpg`
+
+-var infoData = []
+-infoData.push({icon:"fa-pen",title:"Graphic Design",desc:"Graphic design is the process of visual communication and problem-solving using one or more of typography,photography and illustration."})
+-infoData.push({icon:"fa-link",title:"Web Design",desc:"Web design encompasses many different skills and disciplines in the production and maintenance of websites."})
+-infoData.push({icon:"fa-sliders",title:"UI & UX",desc:"Process of enhancing user satisfaction with a product by improving the usability, accessibility, and pleasure provided in the interaction."})
+-infoData.push({icon:"fa-laptop",title:"Web Development",desc:"Web development is a broad term for the work involved in developing a web site for the Internet or an intranet."})
+
+//- portfolio
+
+-var portfolioData = []
+-portfolioData.push({img:`${imagesPath}/protfolio-1.jpg`,title:"Project Here",desc:"My creative ability is very difficult to measure because it can manifest in so many surprising and."})
+-portfolioData.push({img:`${imagesPath}/protfolio-2.jpg`,title:"Project Here",desc:"My creative ability is very difficult to measure because it can manifest in so many surprising and."})
+-portfolioData.push({img:`${imagesPath}/protfolio-3.jpg`,title:"Project Here",desc:"My creative ability is very difficult to measure because it can manifest in so many surprising and."})
+
+//- about 
+
+-images["about"] = `${imagesPath}/about.jpg`
+
+//- ---- End index page 
+
+//- work page 
+
+//- info 
+-var detailsInfo = [["Category","Branding/Ideas"]]
+-detailsInfo.push(["Autor","Graphberry"])
+-detailsInfo.push(["Year","2019"])
+
+//- project
+-images["project"] ={}
+-images["project"]["main"] = `${imagesPath}/project-main.jpg`
+-images["project"]["img1"] = `${imagesPath}/project-1.jpg`
+-images["project"]["img2"] = `${imagesPath}/project-2.jpg`
+
+

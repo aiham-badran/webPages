@@ -1,0 +1,104 @@
+@use "../vars";
+
+.nav{ 
+  padding: 1em 0;
+
+  .brand{
+    width: 60px;
+  }
+  // ---- End brand
+
+  .navbar{
+    // position: relative;
+
+    &.open{
+
+      &::before{
+        content: "";
+        background-color: rgba(#666, .3);
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top:0;
+        left: 0;
+      }
+      // ---- End navbar.open::before
+
+      .content__navbar{
+        // display: block;
+        transform: translateX(0);
+      }
+    }
+
+    .btn__navbar{
+      font-size: 1.5rem;
+      color: vars.$main-color;
+      background-color: transparent;
+      cursor: pointer;
+      transition: color .2s ;
+
+      &:hover{
+        color: #333;
+      }
+    }
+    // ---- End .btn__navbar
+    
+    .content__navbar{
+      // display: none;
+      text-transform: capitalize;
+      background-color: vars.$footer-section-bg;
+      min-height: 100vh;
+      min-width: 250px;
+      padding: 1em 1.5em;
+      position: fixed;
+      right:0;
+      top:0;
+      transform: translateX(200%);
+      transition: transform .5s linear;
+    
+
+      .close-btn__navbar{
+        font-size: 1.25rem;
+        color:#eee;
+        background-color: transparent;
+        cursor: pointer;
+        &:hover{
+          color:vars.$primary-color;
+        }
+      }
+      // ---- End close-btn__navbar
+
+      .part__navbar{
+        .items__part__navbar{
+          font-size: .9rem;
+          color: #eee;
+          
+          padding: {
+            top: .5em;
+            bottom: 1.5em;
+          }
+
+          .link__part__navbar{
+            &.active,
+            &:hover{
+              color:vars.$primary-color
+            }
+          }
+          // ---- End link__part__navbar
+        }
+        // ---- End items__part__navbar
+
+        &:first-of-type{
+          .items__part__navbar{
+            font-size: 1.2rem;
+          }
+        }
+        // ---- End part__navbar:first-of-type items__part__navbar
+      } 
+      // ---- End part__navbar
+    }
+    // ---- End content__navbar
+  }
+  // ---- End navbar 
+} 
+// ---- End nav 

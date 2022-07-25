@@ -1,0 +1,23 @@
+nav.nav
+  .container
+    .justify--between
+      //- brand  
+      .brand 
+        img(src=`${imagesPath}/logo.png`, alt="the brand image")
+      
+      //- navbar 
+      .navbar 
+        button.btn__navbar 
+          i.fa-bars
+        .content__navbar
+          button.close-btn__navbar
+            i.fa-xmark
+          each part in navbar
+            .part__navbar
+              small.header__part__navbar=part.head
+              ul.items__part__navbar 
+                each item in part.lists 
+                  li.item__part__navbar
+                    a(href=item[1] class="link__part__navbar" class=item[2])=item[0]
+          
+          

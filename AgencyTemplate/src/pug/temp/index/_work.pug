@@ -1,0 +1,9 @@
+include ../../_vars.pug
+
+section.work.section
+  .row 
+    each item in worksData 
+      .col-12.col-lg-4.item__work.text--center
+        i.icon__item__work(class=item[0])
+        h3.title__item__work= item[1]
+        p.desc__item__work= item[2]

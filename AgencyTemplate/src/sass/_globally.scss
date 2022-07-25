@@ -1,0 +1,24 @@
+@use "./vars";
+@use "./mixins/media" as mx;
+@use "./utilities/reset";
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;700&display=swap');
+
+:root{
+  @include mx.media("(max-width:760px)"){
+    font-size: 14px;
+  }
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  color: vars.$main-color;
+  max-width: 1920px;
+  margin: auto;
+  line-height: 1.5;
+}
+
+@include reset.resetTags(vars.$restItems);

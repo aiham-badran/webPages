@@ -1,0 +1,42 @@
+@use "../../vars";
+@use "./mixins/media" as mx;
+
+
+.info{
+  
+  .card{
+    
+    order: -1;
+    padding-left: 3em;
+    padding-top: 1.5em;
+    margin-bottom: 1.5em;
+    border-radius: 2px;
+    box-shadow: 0 0 5px 0 rgba( #666, .2);
+
+    @include mx.media("(min-width:767px)"){
+      order: 0;
+    }
+
+    .details__info{
+      .item__details{
+        padding-bottom: .85em;
+        font-size: .8rem;
+        
+        .header__item__details{
+          font-size: 1rem;
+          font-weight: 800;
+          color: vars.$header-color;
+          padding-bottom: .25em;
+          
+        }
+        // ---- End header__item__details
+
+      }
+      // ---- End item__details
+    }
+    // ---- End details__info
+  }
+  // ---- End card
+  
+}
+// ---- End info

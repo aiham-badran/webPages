@@ -1,0 +1,36 @@
+@use "../values" as var;
+
+@mixin btn($btn) {
+  
+  .btn{
+
+    text-transform: capitalize;
+    border-radius: 8px;
+    padding: .375em .75em;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+    cursor: pointer;
+    transition: all .15s;
+  }
+
+  @if(index($btn, "btn--flat")){
+    .btn--flat{
+      border-radius: 1px;
+    }
+  }
+
+  @if(index($btn, "btn--gray" )){
+    .btn--gray{
+      background-color: var.$gray;
+      color: var.$black-800;
+    }
+  }
+
+  @if(index($btn, "btn--xxl" )){
+    .btn--xxl{
+      padding: .75em 1.85em 
+    }
+  }
+}

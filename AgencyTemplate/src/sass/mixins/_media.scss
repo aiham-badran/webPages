@@ -1,0 +1,6 @@
+// 
+@mixin media($view) {
+  @media #{$view} {
+    @content
+  }
+}

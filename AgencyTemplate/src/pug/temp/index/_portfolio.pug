@@ -1,0 +1,20 @@
+include ../../_vars.pug
+
+section#portfolio.portfolio.section--colorful
+  //- header
+  -sectionHeader[0]= "portfolio"
+  -sectionHeader[1]= "If you do it right, it will last forever."
+  include ./_headerSection
+
+  //- content
+  .row 
+    //- info  
+    each item in portfolioData
+      //- lg 4
+      .col-12.col-lg-4
+        .items__portfolio
+          figure.image__item__portfolio
+            img(src=item.img, alt="the image about services section")
+          h4.title__item__portfolio= item.title
+          p.desc__item__portfolio= item.desc
+          

@@ -1,0 +1,31 @@
+// map has cols for grid layout
+$grid-cols: (
+  "col":(2,4,5,6,8,10,12),
+  "lg":(4,6,8),
+  "md": (3,6,8,12),
+  "d-md-up":true,
+  "d-lg-up":true,
+  );
+
+// list has tag want to reset 
+$restItems:(
+  "a",
+  "ul",
+  "img",
+  "button");
+
+// list has flex class
+$flex-class: ("justify--between","box--center");
+
+// list has global classes
+$classes:("text--center");
+
+// colors 
+$section-bg: #fafafa;
+$footer-section-bg: #2c4755;
+
+$primary-color:#10cab7;
+$section-title-color: #ebeced;
+$header-color:#334752;
+$main-color:#6d6d6d;
+

@@ -1,0 +1,24 @@
+@use "../../vars" ;
+@use "./mixins/media" as mx;
+
+.header{
+  // background-color: vars.$section-bg;
+  background: linear-gradient(to top, rgba(#ddd,.2),rgba(#fff,.9)) ,url("../images/header-bg.jpg")  ;
+  background-position: center 1% ; // lg center 18%
+  background-size: cover ;
+  background-repeat: no-repeat;
+  min-height: 60vh;
+  padding: 1.5em 0;
+
+  @include mx.media("(min-width:767px)"){
+    background-position: center 18% ; // lg center 18%
+  }
+  
+  .title__header{
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: vars.$primary-color;
+    margin-bottom: .5em;
+  }
+  // ---- End title__header
+}

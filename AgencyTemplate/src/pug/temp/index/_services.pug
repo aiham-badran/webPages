@@ -1,0 +1,31 @@
+include ../../_vars.pug
+
+section#services.services.section
+  .container 
+    
+    //- header
+    -sectionHeader[0]= "services"
+    -sectionHeader[1]= "Don't be busy, be productive"
+    include ./_headerSection
+
+    //- content
+    .row 
+      //- info // lg 8  
+      .col-12.col-lg-8
+        .row.info__services 
+          each item in infoData
+            //- lg 6
+            .col-12.col-lg-6.info__item 
+              .row
+                .col-2.icon__info
+                  i(class=item.icon)
+                .col-10
+                  h4.title__info= item.title
+                  p.desc__info= item.desc
+            
+      //- image
+      .col-4.d-lg-up
+        figure.image__services
+          img(src=images.services, alt="the image about services section")
+
+

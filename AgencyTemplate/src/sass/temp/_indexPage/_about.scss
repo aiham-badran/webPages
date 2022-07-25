@@ -1,0 +1,82 @@
+@use "../../vars";
+@use "../../placeholder";
+@use "./mixins/media" as mx;
+
+
+.about{
+
+  .row{
+    justify-content: space-around;
+  }
+  // ---- End row
+
+  .col-4:last-of-type{
+    order: -1;
+  }
+  // ---- End col-4:last-of-type
+  
+  .content__about{
+    padding: 1.5em .5em 1.5em 2.5em;
+    
+    @include mx.media("(max-width:997px)"){
+      padding: 0 .5em;
+    }
+  
+    .desc__about{
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: vars.$header-color;
+      
+      &::after{
+        content:"";
+        border: 1px solid vars.$primary-color;
+        display: block;
+        width: 55%;
+        margin: {
+          top:2em;
+          bottom:1em;
+        } 
+      }
+      // ---- End after
+    }
+    // ---- End desc__about
+  }
+  // ---- End content__about
+
+  .image__about{
+    @extend %img-small;
+    
+    img{
+      object-position: right;
+    }
+    // ---- End img
+
+    &::before,
+    &::after{
+      content: "";
+      background-color: vars.$primary-color;
+      position: absolute;
+      z-index: -1;      
+    }
+    
+    &::before{
+      width: 60px;
+      height: 250px;
+      right:-30px;
+      top:-25px;
+    }
+    // ---- End before
+
+    &::after{
+      width: 80px;
+      height: 50px;
+      right: -80px;
+      top:175px;
+    }
+    // ---- End after
+
+  }
+  // ---- End image__about
+}
+// ---- End about
+

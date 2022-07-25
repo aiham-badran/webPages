@@ -1,0 +1,60 @@
+@use "sass:map";
+
+%none-border{
+  border: none;
+  outline: none;
+}
+
+%inherit-font{
+  font-size: 100%;
+  font-family: inherit;
+}
+
+// 
+@mixin resetTags($tags) {
+
+  // a
+
+  @if(index($tags,"a")){
+    a{
+      text-decoration: none;
+      color:inherit
+    }
+  }
+
+  //ul 
+
+  @if(index($tags,"ul")){
+    ul{
+      list-style: none;
+    }
+  }
+
+  // button
+  
+  @if(index($tags, "button")){
+    button,
+    button:focus,
+    button:hover
+    {
+      @extend %none-border;
+      @extend %inherit-font
+    }
+  };
+  
+  // input
+  @if(index($tags, "input")){
+    input{
+      @extend %none-border;
+      @extend %inherit-font
+    }
+  };
+
+  // img
+  @if(index($tags,"img")){
+    img{
+      display: inline-block;
+      max-width: 100%;
+    }
+  }
+}

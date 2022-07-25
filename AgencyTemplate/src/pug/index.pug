@@ -1,0 +1,20 @@
+extends ./globally/_base
+
+block vars
+  include ./_vars
+
+prepend body
+  //- nav 
+  include ./temp/_nav
+  //- header
+  include ./temp/index/_header.pug
+  //- work
+  include ./temp/index/_work.pug
+  //- services 
+  include ./temp/index/_services.pug
+  //- portfolio
+  include ./temp/index/_portfolio.pug
+  //- about 
+  include ./temp/index/_about.pug
+  //- footer
+  include ./temp/_footer.pug

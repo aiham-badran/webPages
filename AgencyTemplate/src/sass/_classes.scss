@@ -1,0 +1,47 @@
+@use "./functions" as f;
+@use "./vars";
+@use "./utilities/layout";
+@use "./utilities/classes";
+
+
+// container class
+@include layout.container(1170px);
+
+// grid layout - by flex
+@include layout.grid(vars.$grid-cols);
+
+// flex class
+@include layout.flex(vars.$flex-class);
+
+// global class
+@include classes.text(vars.$classes);
+
+// app classes 
+
+// main section  
+.section {
+  padding: #{f.pxToRem(40)}em 0;
+  position: relative;
+  z-index: -1;
+}
+
+.section--colorful{
+  @extend .section;
+  background-color: vars.$section-bg;
+}
+
+// title of section
+.section__title{
+  font-size: 4.5rem; // lg 6rem
+  color:vars.$section-title-color;
+  transform: translateY(-42px);
+  z-index: -2;
+  opacity: .8;
+}
+
+// subtitle in section 
+.section__subtitle{
+  font-size: 1rem;
+  transform: translateY(-80px);
+
+}

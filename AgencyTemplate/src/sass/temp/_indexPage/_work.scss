@@ -1,0 +1,26 @@
+@use "../../vars";
+.work{
+
+  .item__work{
+
+    padding: .5em 2em; // md and lg 4em
+    
+    &:not(:last-of-type){
+      margin-bottom: .75em;
+    }
+
+    .icon__item__work{
+      font-size: 2rem;
+      color: vars.$primary-color;
+    }
+    // ---- End .icon__item__work
+  
+    .title__item__work{
+      margin: 1.5em 0 1em;
+      color:vars.$header-color
+    }
+    // ---- End title__item__work
+  }
+  // ---- End item__work
+}
+// ---- End work

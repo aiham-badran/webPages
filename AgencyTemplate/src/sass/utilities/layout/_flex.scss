@@ -1,0 +1,25 @@
+
+
+%flex{
+  display: flex;
+}
+
+@mixin flex($flexList) {
+
+  @if index($flexList,"justify--between"){
+
+    .justify--between{
+      @extend %flex;
+      justify-content: space-between;
+    }
+  }
+
+  @if($flexList,"box--center"){
+    .box--center{
+      @extend %flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+}

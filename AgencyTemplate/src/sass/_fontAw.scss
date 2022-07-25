@@ -1,0 +1,47 @@
+@use "sass:map";
+@use "./fontawesome" as * ;
+
+
+// solid icons
+$icons-solid : (
+  "earth-africa",
+  "wand-magic-sparkles",
+  "pen",
+  "link",
+  "sliders",
+  "laptop",
+  "bars",
+  "xmark"
+  );
+
+@each $icon in $icons-solid {
+  .fa-#{$icon}{
+    @include fa-icon-solid(map.get($fa-icons,$icon))  
+  }
+}
+
+// regular icons
+
+$icons-regular : (
+  "gem",
+  );
+
+@each $icon in $icons-regular {
+  .fa-#{$icon}{
+    @include fa-icon-regular(map.get($fa-icons,$icon))  
+  }
+}
+
+// brands icons
+
+$icons-brands : (
+  "twitter",
+  "behance",
+  "codepen"
+  );
+
+@each $icon in $icons-brands {
+  .fa-#{$icon}{
+    @include fa-icon-brands(map.get($fa-brand-icons,$icon))  
+  }
+}

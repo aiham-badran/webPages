@@ -1,0 +1,68 @@
+@use "../../placeholder";
+@use "./mixins/media" as mx;
+
+.project{
+  .big-img__project{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 3em;
+    max-height: 400px;    
+    img{
+      @extend %responsive-img;
+      @include mx.media("(max-width:767px)"){
+        order: 0;
+        object-position: center;
+      }
+
+      @include mx.media("(min-width:767px) and (max-width:1020px)"){
+        order: 0;
+        object-position: center -125px;
+      }
+      object-position: center -245px;
+    }
+  }
+  // ---- End big-img__project
+
+  .info__project{
+
+    .item__info__project
+    {
+      &>div{
+        padding: 1em;
+      }
+      // ---- End .item__info__project > div
+
+      &:first-child{
+        div:first-child{
+          order: 1;
+          @include mx.media("(max-width:767px)"){
+            order: 0;
+          }
+        }
+      }
+      // ---- End .item__info__project:first-child  div:first-child
+      
+      .img__item__info{
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 1.2em;
+        max-height: 300px;
+        img{
+          @extend %responsive-img;
+          object-position: center;
+        }
+      }
+      // ---- End img__item__info
+
+      .text__item__info{
+        padding: 2em;
+        line-height: 1.8;
+      } 
+      // ---- End text__item__info
+    }
+    // ---- End item__info__project
+    
+  }
+  // ---- End info__project
+}
+// ---- End project
